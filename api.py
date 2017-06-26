@@ -5,7 +5,7 @@ monitor(app, port=6001)
 
 @app.route("/headers")
 def hello():
-    return str(request.headers) + request.remote_addr
+    return "<xmp>Headers:\n{}Remote Address:\n{}</xmp>".format(request.headers, request.remote_addr)
 
 @app.route("/")
 def phippy():
