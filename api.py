@@ -8,7 +8,7 @@ def hello():
     return "<xmp>Headers:\n{}Remote Address:\n{}</xmp>".format(request.headers, request.remote_addr)
 
 @app.route("/")
-def index();
+def index():
     return "Hello world!"
 
 @app.route("/happy")
