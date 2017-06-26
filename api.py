@@ -8,7 +8,11 @@ def hello():
     return "<xmp>Headers:\n{}Remote Address:\n{}</xmp>".format(request.headers, request.remote_addr)
 
 @app.route("/")
-def phippy():
+def index();
+    return "Hello world!"
+
+@app.route("/happy")
+def phippy_happy():
     return send_file("phippy_happy.png", mimetype="image/png")
 
 @app.route("/scared")
