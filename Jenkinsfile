@@ -8,7 +8,7 @@ node {
   sh("docker build -t ${imageTag} .")
 
   stage 'Push image to registry'
-  #sh("docker push ${imageTag}")
+  // sh("docker push ${imageTag}")
 
   stage "Deploy Application"
   sh("sed -i.bak 's#IMAGE#${imageTag}#' flask-hello-k8s.yaml")
