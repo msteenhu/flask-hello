@@ -17,8 +17,10 @@ node {
 
   stage "Deploy Application"
   sh("sed -i.bak 's#IMAGE#${imageTag}#' flask-hello-k8s.yaml")
+  sh("cat flask-hello-k8s.yaml")
   sh("curl -O https://storage.googleapis.com/kubernetes-release/release/v1.6.6/bin/linux/amd64/kubectl")
   sh("chmod +x kubectl")
   sh("./kubectl apply -f flask-hello-k8s.yaml")
+  sh("./kubectl describe svc")
 }
 
