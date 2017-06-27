@@ -11,6 +11,7 @@ node {
   #sh("docker push ${imageTag}")
 
   stage "Deploy Application"
+  sh("sed -i.bak 's#IMAGE#${imageTag}#' flask-hello-k8s.yaml")
   sh("kubectl apply -f flask-hello-k8s.yaml")
   }
 }
