@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: api
-        image: IMAGE
+        image: registry.k8s.gent:30000/flask-hello:null.3
         imagePullPolicy: Always
         ports:
         - containerPort: 6000

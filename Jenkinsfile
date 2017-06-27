@@ -1,6 +1,6 @@
 node {
   def appName = 'flask-hello'
-  def imageTag = "registry.k8s.gent:30000/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
+  def imageTag = "registry.k8s.gent:30000/${appName}:master.${env.BUILD_NUMBER}"
 
   checkout scm
 
