@@ -1,5 +1,5 @@
 FROM python:3.3-alpine
-RUN pip install flask flask-prometheus
+RUN pip install flask flask-prometheus pylint
 COPY api.py api.py
 COPY phippy.png phippy.png
 COPY phippy_happy.png phippy_happy.png
