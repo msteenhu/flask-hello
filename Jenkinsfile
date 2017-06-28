@@ -8,7 +8,7 @@ node {
   sh("docker build -t ${imageTag} .")
 
   stage 'Test image'
-  sh("docker run --rm ${imageTag} 'pylint -E api.py'")
+  sh("docker run --rm ${imageTag} pylint -E api.py")
 
   stage 'Push image to registry'
   withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId: 'fb8c7f8b-2f8d-4769-bc4a-8b659c8dac5c',
