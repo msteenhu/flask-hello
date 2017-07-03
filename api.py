@@ -9,7 +9,7 @@ def hello():
 
 @app.route("/")
 def index():
-    return "Hello world from k8s!"
+    return "Hello world from Kubernetes!"
 
 @app.route("/happy")
 def phippy_happy():
