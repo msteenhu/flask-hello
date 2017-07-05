@@ -1,12 +1,11 @@
 FROM python:3.3-alpine
 
-
-RUN apk add --update build-base libffi-dev openssl-dev
-
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
-COPY .
+WORKDIR /flask-hello
+
+COPY . .
 
 EXPOSE 5000
 CMD python api.py
