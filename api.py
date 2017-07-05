@@ -27,7 +27,7 @@ def cpuload():
         pr = 213123
         pr * pr
         pr = pr + 1
-    return "Worked for 20s, no tired...", 200
+    return "Worked for 20s, now tired...", 200
 
 @app.route("/happy")
 def phippy_happy():
