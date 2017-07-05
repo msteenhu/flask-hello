@@ -1,7 +1,13 @@
 FROM python:3.3-alpine
-RUN pip install flask flask-prometheus pylint
-COPY api.py api.py
-COPY phippy.png phippy.png
-COPY phippy_happy.png phippy_happy.png
-EXPOSE 6000
+
+# Timezone Europe/Brussels
+ENV TZ=Europe/Brussels
+RUN cp /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+COPY .
+
+EXPOSE 5000
 CMD python api.py
