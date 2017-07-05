@@ -4,7 +4,7 @@ metadata:
   name: flask-hello-deployment
   namespace: default
 spec:
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
