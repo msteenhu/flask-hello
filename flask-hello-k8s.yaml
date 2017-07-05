@@ -19,7 +19,7 @@ spec:
         image: IMAGE
         imagePullPolicy: Always
         ports:
-        - containerPort: 6000
+        - containerPort: 5000
         - containerPort: 6001
       imagePullSecrets:
        - name: k8spoc-registry
@@ -34,4 +34,4 @@ spec:
     app: flask-hello
   ports:
     - protocol: TCP
-      port: 6000
+      port: 5000
