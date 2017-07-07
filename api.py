@@ -10,7 +10,7 @@ monitor(app, port=6001)
 
 @app.route("/")
 def index():
-    return "Hello world!"
+    return "Hello world from Kubernetes!"
 
 @app.route("/host")
 def ip():
