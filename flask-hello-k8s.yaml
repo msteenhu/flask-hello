@@ -2,7 +2,7 @@ apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
   name: flask-hello-deployment
-  namespace: default
+  namespace: jenkins
 spec:
   replicas: 3
   template:
@@ -28,6 +28,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: flask-hello-service
+  namespace: jenkins
 spec:
   selector:
     app: flask-hello
