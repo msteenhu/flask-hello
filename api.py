@@ -10,7 +10,7 @@ monitor(app, port=6001)
 
 @app.route("/")
 def index():
-    return "Hello world from k8s! Edition 1.8.0!!"
+    return "Hello world from k8s! Edition 1.8.2!!"
 
 @app.route("/host")
 def ip():
